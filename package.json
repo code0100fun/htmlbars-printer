@@ -1,0 +1,14 @@
+{
+  "name": "htmlbars-printer",
+  "version": "0.0.1",
+  "description": "Print Handlebars/HTMLBars AST back to template with indentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*-test.js"
+  },
+  "author": "Chase McCarthy and Adolfo Builes",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}
