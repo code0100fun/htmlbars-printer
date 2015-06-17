@@ -2,7 +2,7 @@
   "name": "htmlbars-printer",
   "version": "0.0.1",
   "description": "Print Handlebars/HTMLBars AST back to template with indentation",
-  "main": "index.js",
+  "main": "dist/htmlbars-printer/printer.js",
   "scripts": {
     "build": "rm -rf dist/ tmp/ && ./node_modules/.bin/broccoli build dist",
     "test": "npm run build && mocha dist/tests/**/*-test.js",
@@ -16,6 +16,7 @@
     "broccoli-cli": "^1.0.0",
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-static-compiler": "^0.2.1",
+    "handlebars": "^3.0.3",
     "mocha": "^2.2.5"
   }
 }
