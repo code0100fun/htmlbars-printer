@@ -4,11 +4,18 @@
   "description": "Print Handlebars/HTMLBars AST back to template with indentation",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests/**/*-test.js"
+    "build": "rm -rf dist/ tmp/ && ./node_modules/.bin/broccoli build dist",
+    "test": "npm run build && mocha dist/tests/**/*-test.js",
+    "postinstall": "npm run build"
   },
   "author": "Chase McCarthy and Adolfo Builes",
   "license": "ISC",
   "devDependencies": {
+    "broccoli": "^0.16.3",
+    "broccoli-babel-transpiler": "^5.1.1",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-static-compiler": "^0.2.1",
     "mocha": "^2.2.5"
   }
 }
