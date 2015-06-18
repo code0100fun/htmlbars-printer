@@ -39,7 +39,7 @@ describe('print(ast)', function(){
     });
 
     it('subexpressions', function(){
-      const { actual, expected } = loadFromString('{{name (false)}}');
+      const { actual, expected } = loadFromString('{{name (foo)}}');
       assert.equal(actual, expected);
     });
 
@@ -60,6 +60,11 @@ describe('print(ast)', function(){
 
     it('string literal', function(){
       const { actual, expected } = loadFromString('{{link-to "foo"}}');
+      assert.equal(actual, expected);
+    });
+
+    it('boolean literal', function(){
+      const { actual, expected } = loadFromString('{{false}}');
       assert.equal(actual, expected);
     });
   });
