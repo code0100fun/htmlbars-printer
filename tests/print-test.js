@@ -24,7 +24,7 @@ describe('print(ast)', function(){
     });
 
     it('mustache', function(){
-      const { actual, expected } = loadFromString('{{ name }}');
+      const { actual, expected } = loadFromString('{{name}}');
       assert.equal(actual, expected);
     });
 
@@ -39,7 +39,12 @@ describe('print(ast)', function(){
     });
 
     it('subexpressions', function(){
-      const { actual, expected } = loadFromString('{{ name (false) }}');
+      const { actual, expected } = loadFromString('{{name (false)}}');
+      assert.equal(actual, expected);
+    });
+
+    it('block statement', function(){
+      const { actual, expected } = loadFromFixture('old-each');
       assert.equal(actual, expected);
     });
   });
