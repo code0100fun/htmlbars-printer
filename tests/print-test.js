@@ -47,5 +47,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromFixture('old-each');
       assert.equal(actual, expected);
     });
+
+    it('partial statement', function(){
+      const { actual, expected } = loadFromString('{{> foo}}');
+      assert.equal(actual, expected);
+    });
   });
 });
