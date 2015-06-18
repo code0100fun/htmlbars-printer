@@ -72,5 +72,15 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{123}}');
       assert.equal(actual, expected);
     });
+
+    it('undefined literal', function(){
+      const { actual, expected } = loadFromString('{{undefined}}');
+      assert.equal(actual, expected);
+    });
+
+    it('null literal', function(){
+      const { actual, expected } = loadFromString('{{null}}');
+      assert.equal(actual, expected);
+    });
   });
 });
