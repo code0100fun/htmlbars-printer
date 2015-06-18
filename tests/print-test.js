@@ -82,5 +82,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{null}}');
       assert.equal(actual, expected);
     });
+
+    it('hash', function(){
+      const { actual, expected } = loadFromString('{{foo "hash" bar=(bax) baz="qux"}}');
+      assert.equal(actual, expected);
+    });
   });
 });
