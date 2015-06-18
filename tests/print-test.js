@@ -67,5 +67,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{false}}');
       assert.equal(actual, expected);
     });
+
+    it('number literal', function(){
+      const { actual, expected } = loadFromString('{{123}}');
+      assert.equal(actual, expected);
+    });
   });
 });
