@@ -52,5 +52,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{> foo}}');
       assert.equal(actual, expected);
     });
+
+    it('comment statement', function(){
+      const { actual, expected } = loadFromString('{{! Some Comment }}');
+      assert.equal(actual, expected);
+    });
   });
 });
