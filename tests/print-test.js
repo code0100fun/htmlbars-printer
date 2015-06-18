@@ -92,5 +92,11 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{foo.bar.baz}}');
       assert.equal(actual, expected);
     });
+
+    it('if/else statement', function(){
+      const { actual, expected } = loadFromFixture('if-else');
+      assert.equal(actual, expected);
+    });
+
   });
 });
