@@ -57,5 +57,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{! Some Comment }}');
       assert.equal(actual, expected);
     });
+
+    it('string literal', function(){
+      const { actual, expected } = loadFromString('{{link-to "foo"}}');
+      assert.equal(actual, expected);
+    });
   });
 });
