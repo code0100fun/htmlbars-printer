@@ -37,5 +37,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromFixture('indented-with-mustaches');
       assert.equal(actual, expected);
     });
+
+    it('subexpressions', function(){
+      const { actual, expected } = loadFromString('{{ name (false) }}');
+      assert.equal(actual, expected);
+    });
   });
 });
