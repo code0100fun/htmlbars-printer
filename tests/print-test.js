@@ -87,5 +87,10 @@ describe('print(ast)', function(){
       const { actual, expected } = loadFromString('{{foo "hash" bar=(bax) baz="qux"}}');
       assert.equal(actual, expected);
     });
+
+    it('nested path', function(){
+      const { actual, expected } = loadFromString('{{foo.bar.baz}}');
+      assert.equal(actual, expected);
+    });
   });
 });
