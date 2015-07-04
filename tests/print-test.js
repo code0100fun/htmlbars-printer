@@ -49,7 +49,7 @@ describe('print(ast)', function(){
     });
 
     it('partial statement', function(){
-      const { actual, expected } = loadFromString('{{> foo}}');
+      const { actual, expected } = loadFromString('{{> foo bar="baz"}}');
       assert.equal(actual, expected);
     });
 
