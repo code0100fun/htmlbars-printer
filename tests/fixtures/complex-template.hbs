@@ -1,0 +1,69 @@
+Hello, <strong>{{firstName}} {{lastName}}</strong>!
+
+<header>
+  <h1>Igor's Blog</h1>
+</header>
+
+<div>
+  {{outlet}}
+</div>
+
+<footer>
+  &copy;2013 Igor's Publishing, Inc.
+</footer>
+
+{{#if person}}
+  Welcome back, <b>{{person.firstName}} {{person.lastName}}</b>!
+{{else}}
+  Please log in.
+{{/if}}
+
+<ul>
+  {{#each people as |person|}}
+    <li>Hello, {{person.name}}!</li>
+  {{/each}}
+</ul>
+
+{{#each people as |person|}}
+  Hello, {{person.name}}!
+{{else}}
+  Sorry, nobody is here.
+{{/each}}
+
+{{#link-to "photos" data-toggle="dropdown"}}Photos{{/link-to}}
+{{input type="text" data-toggle="tooltip" data-placement="bottom" title="Name"}}
+
+<div class={{if isUrgent "is-urgent"}}>
+  Warning!
+</div>
+
+<div class={{priority}}>
+  Warning!
+</div>
+
+<div class={{if isEnabled "enabled" "disabled"}}>
+  Warning!
+</div>
+
+<ul>
+  {{#each photos as |photo|}}
+    <li>{{#link-to "photos.edit" photo}}{{photo.title}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to "photos.photo.edit" 1}}
+  First Photo Ever
+{{/link-to}}
+
+<div class='intro'>
+  {{intro}}
+</div>
+
+{{#if isExpanded}}
+  <div class='body'>{{body}}</div>
+  <button {{action "contract"}}>Contract</button>
+{{else}}
+  <button {{action "expand"}}>Show More...</button>
+{{/if}}
+
+<p><button {{action "select" post}}>✓</button> {{post.title}}</p>

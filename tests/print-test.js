@@ -98,5 +98,20 @@ describe('print(ast)', function(){
       assert.equal(actual, expected);
     });
 
+    it('if/else nested if statement', function(){
+      const { actual, expected } = loadFromFixture('if-else-nested-if');
+      assert.equal(actual, expected);
+    });
+
+    it('each as', function(){
+      const { actual, expected } = loadFromFixture('each-as');
+      assert.equal(actual, expected);
+    });
+
+    it('complex template', function(){
+      const { actual, expected } = loadFromFixture('complex-template');
+      assert.equal(actual, expected);
+    });
+
   });
 });
